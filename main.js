@@ -137,7 +137,7 @@
   /* ── Lazy WhatsApp number setup ───────────── */
   // EDITAR: Cambia este número por el tuyo (formato: código de país + número sin espacios)
   // Ejemplo El Salvador: 50370000000 (503 = código de país)
-  var WA_NUMBER  = '50300000000';
+  var WA_NUMBER  = '50377779714';
   var WA_MESSAGE = 'Hola%20Omar%2C%20deseo%20informaci%C3%B3n%20sobre%20servicios%20contables.';
   var WA_URL = 'https://wa.me/' + WA_NUMBER + '?text=' + WA_MESSAGE;
 
