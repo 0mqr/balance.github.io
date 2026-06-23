@@ -1,264 +1,590 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Omar Segura | Servicios Contables</title>
-
-<style>
-
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6f8;
-    color:#222;
-}
-
-header{
-    background:#12355b;
-    color:white;
-    padding:50px 20px;
-    text-align:center;
-}
-
-header h1{
-    margin:0;
-    font-size:40px;
-}
-
-header p{
-    font-size:20px;
-}
-
-
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-}
-
-
-.card{
-    background:white;
-    padding:25px;
-    margin:20px 0;
-    border-radius:12px;
-    box-shadow:0 3px 10px #ccc;
-}
-
-
-h2{
-    color:#12355b;
-}
-
-
-ul{
-    line-height:2;
-}
-
-
-.btn{
-    display:inline-block;
-    background:#198754;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:8px;
-    margin-top:15px;
-}
-
-
-footer{
-    background:#12355b;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Omar Segura – Servicios Contables Digitales. Contabilidad organizada, procesos eficientes. ContaPortable, Excel avanzado y automatización para pequeñas empresas en El Salvador." />
+  <title>Omar Segura · Servicios Contables Digitales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-
 <body>
 
-
-<header>
-
-<h1>Omar Segura</h1>
-
-<p>
-Servicios Contables | ContaPortable | Excel | Automatización
-</p>
-
-</header>
-
-
-
-<section>
-
-
-<div class="card">
-
-<h2>Sobre mí</h2>
-
-<p>
-Asistente contable orientado a la optimización de procesos mediante
-herramientas digitales, sistemas contables y automatización de tareas.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h2>Servicios</h2>
-
-<ul>
-
-<li>Capacitación y asesoría en ContaPortable</li>
-
-<li>Configuración y uso del sistema contable</li>
-
-<li>Registro y organización de operaciones contables</li>
-
-<li>Libros de IVA y procesos tributarios</li>
-
-<li>Elaboración de plantillas en Excel</li>
-
-<li>Automatización de procesos administrativos</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>Capacitación ContaPortable</h2>
-
-
-<p>
-
-Aprende a utilizar el sistema desde cero:
-
-</p>
-
-
-<ul>
-
-<li>Configuración inicial</li>
-
-<li>Catálogo contable</li>
-
-<li>Compras y ventas</li>
-
-<li>Partidas contables</li>
-
-<li>Reportes financieros</li>
-
-<li>Buenas prácticas contables</li>
-
-</ul>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>Excel aplicado a Contabilidad</h2>
-
-<ul>
-
-<li>Fórmulas avanzadas</li>
-
-<li>Tablas dinámicas</li>
-
-<li>Limpieza de información</li>
-
-<li>Plantillas de control</li>
-
-<li>Reducción de tareas repetitivas</li>
-
-
-</ul>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h2>Servicios contables</h2>
-
-
-<ul>
-
-<li>Apoyo en procesos contables</li>
-
-<li>Organización documental</li>
-
-<li>Revisión de información financiera</li>
-
-<li>Soporte administrativo</li>
-
-</ul>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Contacto</h2>
-
-
-<p>
-📧 balance.omqr@gmail.com
-</p>
-
-
-<p>
-📱 WhatsApp: "(+503) 7777-9714"
-</p>
-
-
-<a class="btn" href="https://wa.me/50377779714">
-Contactar
-</a>
-
-
-</div>
-
-
-
-
-</section>
-
-
-
-<footer>
-
-© 2026 Omar Segura - Servicios Contables
-
-</footer>
-
-
+  <!-- ═══════════════════════════════════════
+       CURSOR PERSONALIZADO (solo desktop)
+  ════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-brand">
+        <span class="brand-name">Omar Segura</span>
+        <span class="brand-sub">C.P.A.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#sobre-mi" class="mobile-link">Sobre mí</a></li>
+      <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+      <li><a href="#planes" class="mobile-link">Planes</a></li>
+      <li><a href="#metodologia" class="mobile-link">Metodología</a></li>
+      <li><a href="#portafolio" class="mobile-link">Portafolio</a></li>
+      <li><a href="#contacto" class="mobile-link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 1 – HERO
+  ════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-accent-line"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-up">Asesoría Contable · El Salvador</p>
+        <h1 class="hero-name reveal-up delay-1">Omar Segura</h1>
+        <h2 class="hero-title reveal-up delay-2">Servicios Contables<br /><span class="accent-green">Digitales</span></h2>
+        <p class="hero-desc reveal-up delay-3">
+          Optimización contable mediante herramientas digitales,<br class="br-desktop" />
+          Excel avanzado y automatización de procesos.
+        </p>
+        <div class="hero-actions reveal-up delay-4">
+          <a href="#contacto" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Solicitar asesoría
+          </a>
+          <a href="#servicios" class="btn btn-outline">
+            Ver servicios
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats reveal-up delay-5">
+          <div class="stat">
+            <span class="stat-num">+5</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Enfoque digital</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">PYMES</span>
+            <span class="stat-label">Especializados</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right delay-2">
+        <div class="hero-card-stack">
+          <div class="floating-card card-1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <div>
+              <p class="fc-label">IVA Mensual</p>
+              <p class="fc-val">Procesado</p>
+            </div>
+            <span class="fc-badge">✓</span>
+          </div>
+          <div class="hero-device">
+            <div class="device-screen">
+              <div class="ds-header">
+                <div class="ds-dot r"></div><div class="ds-dot y"></div><div class="ds-dot g"></div>
+                <span>Preliminar_IVA.xlsx</span>
+              </div>
+              <div class="ds-table">
+                <div class="ds-row header">
+                  <span>Concepto</span><span>Débito</span><span>Crédito</span>
+                </div>
+                <div class="ds-row"><span>IVA Ventas</span><span class="green">$2,840</span><span>—</span></div>
+                <div class="ds-row"><span>IVA Compras</span><span>—</span><span class="green">$1,120</span></div>
+                <div class="ds-row highlight"><span>Pago neto</span><span class="green">$1,720</span><span>—</span></div>
+              </div>
+              <div class="ds-bar">
+                <div class="ds-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card card-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <div>
+              <p class="fc-label">ContaPortable</p>
+              <p class="fc-val">Activo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 2 – SOBRE MÍ
+  ════════════════════════════════════════ -->
+  <section class="section sobre-mi" id="sobre-mi">
+    <div class="container">
+      <div class="section-label reveal-up">Sobre mí</div>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <h2 class="section-title reveal-up">Contabilidad clara,<br /><span class="accent-blue">tecnología aplicada.</span></h2>
+          <p class="sobre-desc reveal-up">
+            Soy contador público con enfoque en procesos contables digitales para pequeñas empresas y emprendedores.
+            Combino conocimiento contable sólido con herramientas como ContaPortable, Excel avanzado y automatización
+            para que tu negocio opere con orden y eficiencia.
+          </p>
+          <p class="sobre-desc reveal-up">
+            Mi trabajo no es solo llevar números — es organizar la información financiera para que tome mejores decisiones.
+          </p>
+          <div class="sobre-badges reveal-up">
+            <span class="badge">Contador Público Autorizado</span>
+            <span class="badge">Excel Avanzado</span>
+            <span class="badge">ContaPortable Certified</span>
+          </div>
+        </div>
+        <div class="sobre-skills">
+          <div class="skill-card reveal-right">
+            <div class="skill-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="skill-info">
+              <h3>Contabilidad</h3>
+              <p>Registros, estados financieros y libros IVA.</p>
+            </div>
+          </div>
+          <div class="skill-card reveal-right delay-1">
+            <div class="skill-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="skill-info">
+              <h3>Sistemas contables</h3>
+              <p>Implementación y capacitación en ContaPortable.</p>
+            </div>
+          </div>
+          <div class="skill-card reveal-right delay-2">
+            <div class="skill-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="skill-info">
+              <h3>Excel avanzado</h3>
+              <p>Fórmulas, plantillas y dashboards financieros.</p>
+            </div>
+          </div>
+          <div class="skill-card reveal-right delay-3">
+            <div class="skill-icon green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="skill-info">
+              <h3>Automatización</h3>
+              <p>Eliminación de tareas repetitivas y optimización.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 3 – SERVICIOS
+  ════════════════════════════════════════ -->
+  <section class="section servicios bg-alt" id="servicios">
+    <div class="container">
+      <div class="section-label reveal-up">Servicios</div>
+      <h2 class="section-title centered reveal-up">¿En qué puedo<br /><span class="accent-blue">ayudarte?</span></h2>
+      <p class="section-subtitle reveal-up">Soluciones contables y digitales diseñadas para pequeñas empresas y emprendedores.</p>
+      <div class="services-grid">
+
+        <div class="service-card reveal-up">
+          <div class="service-header blue">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>ContaPortable</h3>
+          </div>
+          <ul class="service-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Configuración inicial del sistema
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Capacitación al equipo
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Registro contable operativo
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Generación de reportes
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Libros de IVA
+            </li>
+          </ul>
+          <a href="#contacto" class="service-cta">Solicitar →</a>
+        </div>
+
+        <div class="service-card reveal-up delay-1">
+          <div class="service-header green">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Procesos Contables</h3>
+          </div>
+          <ul class="service-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Registro de operaciones diarias
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Organización documental
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Apoyo administrativo
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Revisión de información financiera
+            </li>
+          </ul>
+          <a href="#contacto" class="service-cta">Solicitar →</a>
+        </div>
+
+        <div class="service-card reveal-up delay-2">
+          <div class="service-header blue">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3>Excel para Contadores</h3>
+          </div>
+          <ul class="service-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Fórmulas avanzadas
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Plantillas contables personalizadas
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Automatización con macros
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Reportes dinámicos
+            </li>
+          </ul>
+          <a href="#contacto" class="service-cta">Solicitar →</a>
+        </div>
+
+        <div class="service-card reveal-up delay-3">
+          <div class="service-header green">
+            <div class="service-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Automatización</h3>
+          </div>
+          <ul class="service-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Eliminación de tareas repetitivas
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Optimización de procesos internos
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Análisis de datos financieros
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Flujos de trabajo eficientes
+            </li>
+          </ul>
+          <a href="#contacto" class="service-cta">Solicitar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 4 – PLANES
+  ════════════════════════════════════════ -->
+  <section class="section planes" id="planes">
+    <div class="container">
+      <div class="section-label reveal-up">Planes</div>
+      <h2 class="section-title centered reveal-up">Elige tu punto<br /><span class="accent-blue">de partida</span></h2>
+      <p class="section-subtitle reveal-up">Adaptado a las necesidades reales de tu negocio.</p>
+      <div class="planes-grid">
+
+        <div class="plan-card reveal-up">
+          <div class="plan-top">
+            <p class="plan-tag">Básico</p>
+            <h3>Implementación ContaPortable</h3>
+            <div class="plan-price">
+              <span class="price-from">Desde</span>
+              <span class="price-val">$300</span>
+            </div>
+          </div>
+          <ul class="plan-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Configuración del sistema</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Capacitación personalizada</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Guía de uso del sistema</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Buenas prácticas contables</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline-blue">Consultar disponibilidad</a>
+        </div>
+
+        <div class="plan-card featured reveal-up delay-1">
+          <div class="plan-badge">Más completo</div>
+          <div class="plan-top">
+            <p class="plan-tag">Productividad</p>
+            <h3>ContaPortable + Excel</h3>
+            <div class="plan-price">
+              <span class="price-from">Desde</span>
+              <span class="price-val">$450</span>
+            </div>
+          </div>
+          <ul class="plan-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Todo el Plan Básico</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Plantillas Excel personalizadas</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Optimización de procesos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Reportes automatizados</li>
+          </ul>
+          <a href="#contacto" class="btn btn-white">Consultar disponibilidad</a>
+        </div>
+
+        <div class="plan-card reveal-up delay-2">
+          <div class="plan-top">
+            <p class="plan-tag">Empresa</p>
+            <h3>Capacitación Personalizada</h3>
+            <div class="plan-price">
+              <span class="price-from" style="font-size:1rem; letter-spacing:0.05em;">Precio según</span>
+              <span class="price-val" style="font-size:2rem;">Proyecto</span>
+            </div>
+          </div>
+          <ul class="plan-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Diagnóstico de procesos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Plan de implementación a medida</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Soporte continuo</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#198754" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automatización avanzada</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline-blue">Solicitar cotización</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 5 – METODOLOGÍA
+  ════════════════════════════════════════ -->
+  <section class="section metodologia bg-alt" id="metodologia">
+    <div class="container">
+      <div class="section-label reveal-up">Cómo trabajo</div>
+      <h2 class="section-title centered reveal-up">Un proceso<br /><span class="accent-blue">estructurado</span></h2>
+      <p class="section-subtitle reveal-up">Cada proyecto sigue un camino claro de principio a fin.</p>
+      <div class="metodo-grid">
+
+        <div class="metodo-step reveal-up">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Diagnóstico</h3>
+            <p>Evaluamos el estado actual de tus procesos contables e identificamos oportunidades de mejora.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+
+        <div class="metodo-step reveal-up delay-1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>Organización</h3>
+            <p>Estructuramos la información financiera y definimos el flujo de trabajo adecuado para tu negocio.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+
+        <div class="metodo-step reveal-up delay-2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Implementación</h3>
+            <p>Configuramos las herramientas, capacitamos al equipo y ponemos en marcha los nuevos procesos.</p>
+          </div>
+          <div class="step-connector"></div>
+        </div>
+
+        <div class="metodo-step reveal-up delay-3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Optimización</h3>
+            <p>Medimos resultados, ajustamos lo necesario y automatizamos para mayor eficiencia continua.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 6 – PORTAFOLIO
+  ════════════════════════════════════════ -->
+  <section class="section portafolio" id="portafolio">
+    <div class="container">
+      <div class="section-label reveal-up">Portafolio</div>
+      <h2 class="section-title centered reveal-up">Herramientas que<br /><span class="accent-blue">ya he creado</span></h2>
+      <p class="section-subtitle reveal-up">Recursos contables desarrollados para procesos reales.</p>
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item reveal-up">
+          <div class="pi-icon blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Plantillas Excel Contables</h3>
+          <p>Libros de IVA, estados financieros, flujos de caja y preliminares de declaración — listos para usar.</p>
+          <span class="pi-tag">Excel</span>
+        </div>
+
+        <div class="portfolio-item reveal-up delay-1">
+          <div class="pi-icon green">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Automatizaciones</h3>
+          <p>Macros y fórmulas para eliminar trabajo manual en conciliaciones, reportes y consolidaciones.</p>
+          <span class="pi-tag">Macros</span>
+        </div>
+
+        <div class="portfolio-item reveal-up delay-2">
+          <div class="pi-icon blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Reportes Financieros</h3>
+          <p>Dashboards dinámicos con tablas pivote e indicadores clave para la toma de decisiones.</p>
+          <span class="pi-tag">Reportes</span>
+        </div>
+
+        <div class="portfolio-item reveal-up delay-3">
+          <div class="pi-icon green">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Herramientas ContaPortable</h3>
+          <p>Guías de configuración, flujos de trabajo y manuales para implementar ContaPortable correctamente.</p>
+          <span class="pi-tag">ContaPortable</span>
+        </div>
+
+      </div>
+
+      <div class="portfolio-cta reveal-up">
+        <p>¿Necesitas una herramienta específica para tu negocio?</p>
+        <a href="#contacto" class="btn btn-primary">Conversemos →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECCIÓN 7 – CONTACTO
+  ════════════════════════════════════════ -->
+  <section class="section contacto bg-dark" id="contacto">
+    <div class="container">
+      <div class="section-label light reveal-up">Contacto</div>
+      <h2 class="section-title centered light reveal-up">Empecemos a<br /><span class="accent-green">trabajar juntos</span></h2>
+      <p class="section-subtitle light reveal-up">Cuéntame sobre tu negocio y te propongo una solución.</p>
+      <div class="contact-grid">
+        <a href="https://wa.me/50300000000?text=Hola%20Omar%2C%20deseo%20información%20sobre%20servicios%20contables." target="_blank" class="contact-card whatsapp reveal-up">
+          <div class="cc-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="cc-info">
+            <p class="cc-label">WhatsApp</p>
+            <p class="cc-val">Respuesta rápida</p>
+          </div>
+          <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <!-- EDITAR: Reemplaza el correo y actualiza el href mailto: -->
+        <a href="mailto:omar@servicioscontablesdigitales.com" class="contact-card email reveal-up delay-1">
+          <div class="cc-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="cc-info">
+            <p class="cc-label">Correo electrónico</p>
+            <p class="cc-val">omar@servicioscontablesdigitales.com</p>
+          </div>
+          <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <!-- EDITAR: Reemplaza # con tu URL de LinkedIn si la tienes -->
+        <a href="#" class="contact-card linkedin reveal-up delay-2">
+          <div class="cc-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div class="cc-info">
+            <p class="cc-label">LinkedIn</p>
+            <p class="cc-val">Perfil profesional</p>
+          </div>
+          <svg class="cc-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-name">Omar Segura</p>
+          <p class="footer-sub">Servicios Contables Digitales</p>
+          <p class="footer-tagline">Contabilidad organizada, procesos eficientes.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#planes">Planes</a>
+          <a href="#metodologia">Metodología</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Omar Segura · Servicios Contables Digitales · El Salvador</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/50300000000?text=Hola%20Omar%2C%20deseo%20información%20sobre%20servicios%20contables." 
+     class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
 </body>
-
 </html>
