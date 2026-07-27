@@ -14,10 +14,10 @@
 var CONFIG = {
   // Número WhatsApp: código de país + número sin espacios ni guiones
   // El Salvador: 503 + tu número  →  ej: 50370123456
-  WA_NUMBER: '50300000000',
+  WA_NUMBER: '50377779714',
 
   // Correo para recibir solicitudes
-  EMAIL: 'omar@servicioscontablesdigitales.com',
+  EMAIL: 'balance.omqr@gmail.com',
 
   // Mensaje WA de contacto directo (sin formulario)
   WA_MSG_DIRECTO: 'Hola%20Omar%2C%20deseo%20información%20sobre%20servicios%20contables.'
