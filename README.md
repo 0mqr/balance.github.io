@@ -1,134 +1,95 @@
-# Omar Segura · Servicios Contables Digitales
+# Omar Segura · Soluciones Contables y Digitales
 
-Sitio web profesional estático. Compatible con GitHub Pages, Netlify y cualquier hosting.  
+Sitio web profesional estático v2. Compatible con GitHub Pages, Netlify y cualquier hosting.  
 No requiere npm, Node.js, ni servidor.
+
+---
+
+## ⚙️ Configuración rápida (lo primero que debes hacer)
+
+Abre `main.js` y edita el bloque `CONFIG` al inicio del archivo:
+
+```js
+var CONFIG = {
+  WA_NUMBER: '50300000000',   // ← Tu número: 503 + número sin espacios
+  EMAIL: 'omar@servicioscontablesdigitales.com',  // ← Tu correo real
+  WA_MSG_DIRECTO: 'Hola%20Omar%2C%20deseo...'    // ← Mensaje por defecto (opcional)
+};
+```
+
+Eso es todo. El botón flotante, la sección de contacto y el formulario usarán esos datos automáticamente.
 
 ---
 
 ## 📁 Estructura de archivos
 
 ```
-index.html    → Contenido y estructura de la página
-styles.css    → Estilos y diseño visual
-main.js       → Comportamiento e interactividad
-assets/       → Imágenes e íconos opcionales
+index.html    → Contenido y estructura
+styles.css    → Diseño visual
+main.js       → Lógica, formulario y configuración
+assets/       → Imágenes opcionales
 README.md     → Este archivo
 ```
 
 ---
 
-## ✏️ Cómo editar textos
+## ✏️ Ediciones comunes
 
-Abre `index.html` en cualquier editor de texto (Notepad, VS Code, etc.).
+### Cambiar nombre o eslogan
+Busca `Omar Segura` o el texto que quieras en `index.html` y edítalo.
 
-### Nombre y eslogan
-Busca `Omar Segura` y reemplaza donde necesites.
+### Cambiar correo en la sección de contacto
+Busca `omar@servicioscontablesdigitales.com` en `index.html`.
 
-### Subtítulos y descripciones
-Busca el texto que quieres cambiar y edítalo directamente.  
-Cada sección tiene un comentario como `<!-- SECCIÓN 2 – SOBRE MÍ -->` para orientarte.
+### Agregar LinkedIn
+Busca `<!-- EDITAR: Reemplaza # con tu URL de LinkedIn -->` en `index.html` y cambia el `href="#"` por tu URL.
 
-### Estadísticas del Hero
-```html
-<span class="stat-num">+5</span>
-<span class="stat-label">Años de experiencia</span>
-```
-Cambia el número y la etiqueta.
+### Agregar un servicio nuevo
+En la sección de servicios, encuentra el panel correspondiente (`tab-contabilidad`, `tab-fiscal`, etc.) y agrega un `<li>` dentro del listado.
 
----
+### Agregar un nuevo panel de servicios
+1. Agrega un botón `.stab` con `data-tab="mi-nuevo-tab"`
+2. Agrega un `<div class="stab-panel" id="tab-mi-nuevo-tab">` con el contenido
+3. El JavaScript lo detecta automáticamente.
 
-## 📱 Cómo cambiar el número de WhatsApp
-
-1. Abre `main.js`
-2. Encuentra esta línea cerca del inicio:
-```js
-var WA_NUMBER = '50300000000';
-```
-3. Reemplaza `50300000000` con tu número real:
-   - Formato: código de país + número sin espacios ni guiones
-   - El Salvador: `503` + tu número (ej: `50370123456`)
-
-El mensaje automático ya está configurado:  
-*"Hola Omar, deseo información sobre servicios contables."*
-
-Para cambiar el mensaje, edita `WA_MESSAGE` en el mismo archivo (usa `%20` para espacios).
+### Cambiar precios
+Busca `<span class="price-val">$300</span>` y actualiza el valor.
 
 ---
 
-## 📧 Cómo cambiar el correo electrónico
+## 📋 Formulario de solicitud
 
-En `index.html`, busca:
-```html
-<a href="mailto:omar@servicioscontablesdigitales.com" ...>
-```
-Reemplaza con tu correo real. Actualiza también el texto visible `cc-val`.
+El formulario funciona sin backend:
+1. El cliente llena los campos
+2. Al hacer clic en "Enviar por WhatsApp" → se abre WhatsApp con el resumen
+3. Al hacer clic en "Enviar por correo" → se abre el cliente de correo con el resumen
 
----
-
-## 💼 Cómo actualizar servicios
-
-Cada tarjeta de servicio está en la sección `<!-- SECCIÓN 3 – SERVICIOS -->`.  
-Cada ítem de lista tiene esta estructura:
-```html
-<li>
-  <svg ...>...</svg>
-  Texto del servicio aquí
-</li>
-```
-Puedes agregar o quitar `<li>` según necesites.
+Los datos **no se guardan** en ningún servidor ni en el navegador.
 
 ---
 
-## 💲 Cómo cambiar precios
+## 🚀 Subir a GitHub Pages
 
-En la sección `<!-- SECCIÓN 4 – PLANES -->`, busca:
-```html
-<span class="price-val">$300</span>
-```
-Reemplaza con tu precio actual.
+1. Crea un repositorio en [github.com](https://github.com)
+2. Sube todos los archivos
+3. Ve a **Settings → Pages → Source: main / root**
+4. Tu sitio estará en: `https://tu-usuario.github.io/nombre-repo`
 
----
-
-## 🔗 Cómo agregar LinkedIn u otras redes
-
-En la sección de contacto, busca el bloque `linkedin`:
-```html
-<a href="#" class="contact-card linkedin ...">
-```
-Reemplaza `#` con la URL completa de tu perfil.  
-Ejemplo: `https://www.linkedin.com/in/omar-segura`
+### Con Netlify (más simple):
+Arrastra la carpeta del proyecto a [netlify.com](https://netlify.com) → URL en segundos.
 
 ---
 
-## 🚀 Cómo subir a GitHub Pages
-
-1. Crea un repositorio en [github.com](https://github.com) (puede ser privado o público)
-2. Sube todos los archivos al repositorio
-3. Ve a **Settings → Pages**
-4. En "Source", selecciona la rama `main` y carpeta `/root`
-5. Haz clic en **Save**
-6. Tu sitio estará en: `https://tu-usuario.github.io/nombre-repositorio`
-
-### Con Netlify (alternativa, aún más simple):
-1. Ve a [netlify.com](https://netlify.com) y crea una cuenta gratuita
-2. Arrastra la carpeta del proyecto al área de deploy
-3. Obtienes una URL en segundos
-
----
-
-## 🎨 Colores del tema
-
-Edita en `styles.css` dentro de `:root`:
+## 🎨 Colores del tema (en styles.css)
 
 ```css
---blue:  #12355B;   /* Azul principal */
---green: #198754;   /* Verde de acento */
---gray:  #F4F6F8;   /* Fondo alterno */
+--blue:  #12355B;  /* Azul principal */
+--green: #198754;  /* Verde de acento */
+--gray:  #F4F6F8;  /* Fondo alterno */
 ```
 
 ---
 
 ## 📞 Soporte
 
-Sitio construido por y para Omar Segura · C.P.A.  
-Servicios Contables Digitales · El Salvador · 2026
+Sitio construido para Omar Segura · Soluciones Contables y Digitales · El Salvador · 2026
