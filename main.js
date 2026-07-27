@@ -13,7 +13,7 @@
 
 var CONFIG = {
   // Número WhatsApp: código de país + número sin espacios ni guiones
-  // El Salvador: 503 + tu número  →  ej: 50370123456
+  // El Salvador: 503 + tu número  →  ej: 50377779714
   WA_NUMBER: '50377779714',
 
   // Correo para recibir solicitudes
